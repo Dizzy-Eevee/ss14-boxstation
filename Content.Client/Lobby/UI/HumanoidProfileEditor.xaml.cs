@@ -34,6 +34,10 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
+using Content.Client._CD.Records.UI; // CD: Records editor imports
+using Content.Shared._CD.Records; // CD: Records editor imports
+using Content.Shared.Chemistry.Reagent; // CD: Records editor imports
+using Content.Shared.FixedPoint; // CD: Records editor imports
 
 namespace Content.Client.Lobby.UI
 {
@@ -102,6 +106,8 @@ namespace Content.Client.Lobby.UI
         private ColorSelectorSliders _rgbSkinColorSelector;
 
         private bool _isDirty;
+
+        private readonly RecordEditorGui _recordsTab; // CD: Record editor
 
         private static readonly ProtoId<GuideEntryPrototype> DefaultSpeciesGuidebook = "Species";
 
@@ -424,6 +430,43 @@ namespace Content.Client.Lobby.UI
             Markings.OnMarkingRankChange += OnMarkingChange;
 
             #endregion Markings
+
+// Box Change Start - CD Records
+            #region CosmaticRecords
+
+            // _allergiesTab = new AllergyPicker(UpdateAllergies);
+            // TabContainer.AddChild(_allergiesTab);
+            // TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-cd-allergies-tab"));
+
+            _recordsTab = new RecordEditorGui(UpdateProfileRecords);
+            TabContainer.AddChild(_recordsTab);
+            TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-cd-records-tab"));
+
+            /* CDCustomSpeciesNameCheck.OnToggled += args =>
+            {
+                CDCustomSpeciesName.Editable = args.Pressed;
+                if (args.Pressed)
+                    Profile = Profile?.WithCDCustomSpeciesName(CDCustomSpeciesName.Text == "" ? null : CDCustomSpeciesName.Text);
+                else
+                    Profile = Profile?.WithCDCustomSpeciesName(null);
+
+                SetDirty();
+            };
+
+            CDCustomSpeciesName.OnTextChanged += args =>
+            {
+                Profile = Profile?.WithCDCustomSpeciesName(args.Text);
+                SetDirty();
+            };
+
+            SpeciesButton.OnItemSelected += args =>
+            {
+                CDCustomSpeciesName.PlaceHolder = Loc.GetString(_species[args.Id].Name);
+            }; */
+
+            #endregion CosmaticRecords
+// Box Change End
+
 
             RefreshFlavorText();
 
@@ -774,6 +817,8 @@ namespace Content.Client.Lobby.UI
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
 
+            _recordsTab.Update(profile); // CD: Station Records
+
             RefreshAntags();
             RefreshJobs();
             RefreshLoadouts();
@@ -1010,6 +1055,17 @@ namespace Content.Client.Lobby.UI
 
             UpdateJobPriorities();
         }
+
+// Box Change Start - Station Records
+        // CD: Records editor
+        private void UpdateProfileRecords(PlayerProvidedCharacterRecords records)
+        {
+            if (Profile is null)
+                return;
+            Profile = Profile.WithCDCharacterRecords(records);
+            IsDirty = true;
+        }
+// Box Change End
 
         private void OpenLoadout(JobPrototype? jobProto, RoleLoadout roleLoadout, RoleLoadoutPrototype roleLoadoutProto)
         {
@@ -1513,6 +1569,8 @@ namespace Content.Client.Lobby.UI
             var name = HumanoidCharacterProfile.GetName(Profile.Species, Profile.Gender);
             SetName(name);
             UpdateNameEdit();
+
+            _recordsTab.Update(Profile); // CD: Update record editor
         }
 
         private async void ExportImage()
