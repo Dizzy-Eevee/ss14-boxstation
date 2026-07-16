@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   id: FloorChasmEntity
   name: chasm
   description: You can't even see the bottom.
@@ -47,8 +47,10 @@
   - type: Tag
     tags:
     - HideContextMenu
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS. the fucking chasm ate my sound
     absorption: 30
+  # End Box Change
 
 - type: entity
   parent: FloorChasmEntity
@@ -59,7 +61,7 @@
     sprite: Tiles/Planet/Chasms/chromite_chasm.rsi
   - type: Icon
     sprite: Tiles/Planet/Chasms/chromite_chasm.rsi
-
+    
 - type: entity
   parent: FloorChasmEntity
   id: FloorDesertChasm
@@ -69,7 +71,7 @@
     sprite: Tiles/Planet/Chasms/desert_chasm.rsi
   - type: Icon
     sprite: Tiles/Planet/Chasms/desert_chasm.rsi
-
+    
 - type: entity
   parent: FloorChasmEntity
   id: FloorSnowChasm
