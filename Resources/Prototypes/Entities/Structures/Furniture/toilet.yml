@@ -115,8 +115,10 @@
         SeatVisualState.SeatUp:
           SeatUp: { state: disposal-up }
           SeatDown: { state: disposal-down }
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 5
+  # End Box Change
 
 - type: entity
   parent: BaseToilet

@@ -66,8 +66,10 @@
     blacklist:
       tags:
       - NoConsoleSound
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
+  # End Box Change
   - type: ContainerContainer
     containers:
       board: !type:Container

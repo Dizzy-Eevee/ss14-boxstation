@@ -54,8 +54,10 @@
   - type: Construction
     graph: Table
     node: TableFrame
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 3
+  # End Box Change
 
 - type: entity
   id: CounterWoodFrame
@@ -111,8 +113,10 @@
   - type: Construction
     graph: Table
     node: CounterWoodFrame
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 5
+  # End Box Change
 
 - type: entity
   id: CounterMetalFrame
@@ -564,8 +568,10 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepWood
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 25
+  # End Box Change
 
 - type: entity
   id: TableCarpet
@@ -618,8 +624,10 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepCarpet
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 35
+  # End Box Change
 
 - type: entity
   id: TableStone
@@ -681,8 +689,10 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepCarpet
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 30
+  # End Box Change
 
 - type: entity
   parent: TableBase
@@ -750,8 +760,10 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepCarpet
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 25
+  # End Box Change
 
 - type: entity
   id: TableFancyBlue
@@ -972,8 +984,10 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepWood
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 25
+  # End Box Change
 
 - type: entity
   id: TableCounterMetal

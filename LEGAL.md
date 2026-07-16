@@ -40,6 +40,7 @@ Below is a list of all the forks we have ported content from, their namespace, a
 | [Frontier Station](https://github.com/new-frontiers-14/frontier-station-14)    | _NF            | [AGPLv3](/LICENSE-AGPLv3.txt)       |
 | [RMC-14](https://github.com/RMC-14/RMC-14)                                     | _RMC14         | [the MIT license](/LICENSE-MIT.txt) |
 | [Sector Umbra](https://github.com/Sector-Umbra/Sector-Umbra)                   | _Umbra         | [the MIT license](/LICENSE-MIT.txt) |
+| [Vermist Dust Sector](https://github.com/vermist-sector/vermist-dust)          | _VDS           | [AGPLv3](/LICENSE-AGPLv3.txt)       |
 
 Assets have distinct licenses in `attributions.yml` and `meta.json` files which must be followed individually.
 

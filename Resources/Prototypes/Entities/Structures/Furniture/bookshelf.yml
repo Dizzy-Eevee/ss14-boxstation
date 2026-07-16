@@ -78,7 +78,9 @@
     graph: Bookshelf
     node: bookshelf
   - type: BlockWeather
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 30
     reflectRay: true
+  # End Box Change
 

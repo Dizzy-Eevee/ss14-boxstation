@@ -52,8 +52,10 @@
       - !type:PlaySoundBehavior
         sound:
           path: /Audio/Effects/plant_rustle.ogg
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 10
+  # End Box Change
 
 - type: entity
   id: PottedPlant0

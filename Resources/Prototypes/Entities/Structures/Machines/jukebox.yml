@@ -64,5 +64,7 @@
         layer:
         - MachineLayer
         density: 200
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS. jukeboxes are also anti-reverb machine did you know that
     absorption: 60
+  # End Box Change

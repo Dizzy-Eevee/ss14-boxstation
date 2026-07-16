@@ -102,9 +102,11 @@
     stateDoorClosed: generic_door
   - type: StaticPrice
     price: 75
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 15
     reflectRay: true
+  # End Box Change
 
 # steel closet base (that can be constructed/deconstructed)
 - type: entity
@@ -308,6 +310,8 @@
     stateDoorOpen: base
     stateDoorClosed: door
   - type: LockVisuals
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
     reflectRay: true
+  # End Box Change

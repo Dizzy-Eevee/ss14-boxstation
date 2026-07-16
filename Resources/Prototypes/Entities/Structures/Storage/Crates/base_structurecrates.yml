@@ -70,8 +70,10 @@
     containers:
       - entity_storage
   - type: RequireProjectileTarget
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 10
+  # End Box Change
 
 - type: entity
   parent: CrateGeneric

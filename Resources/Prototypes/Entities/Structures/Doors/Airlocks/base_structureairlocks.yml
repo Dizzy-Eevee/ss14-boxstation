@@ -183,9 +183,11 @@
     - Airlocks
     - WirePanels
     - Networking
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 10
     reflectRay: true
+  # End Box Change
   placement:
     mode: SnapgridCenter
 

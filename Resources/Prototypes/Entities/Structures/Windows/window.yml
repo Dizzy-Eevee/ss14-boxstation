@@ -103,9 +103,11 @@
   - type: StaticPrice
     price: 100
   - type: BlockWeather
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 10
     reflectRay: true
+  # End Box Change
 
 - type: entity
   parent: Window
@@ -235,9 +237,11 @@
       sprite: Structures/Windows/cracks_directional.rsi
   - type: StaticPrice
     price: 15
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 6
     reflectRay: true
+  # End Box Change
 
 - type: entity
   id: WindowDirectionalRCDResistant

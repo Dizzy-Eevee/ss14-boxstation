@@ -49,8 +49,10 @@
           collection: MetalBreak
   - type: StaticPrice
     price: 50
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 12
+  # End Box Change
 
 #Starts unanchored, cannot be rotated while anchored
 - type: entity
@@ -99,8 +101,10 @@
     bodyType: Static
   - type: Transform
     anchored: true
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS. smaller :-|
     absorption: 10
+  # End Box Change
 
 - type: entity
   name: chair
@@ -244,8 +248,10 @@
     - Wooden
   - type: StaticPrice
     price: 75
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS. wood :-)
     absorption: 18
+  # End Box Change
 
 - type: entity
   name: ritual chair
@@ -355,8 +361,10 @@
   - type: Construction
     graph: WebStructures
     node: chair
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS. web :-)
     absorption: 20
+  # End Box Change
 
 - type: entity
   parent: [SeatBase, BaseDeployFoldable]
@@ -393,8 +401,10 @@
     graph: Seat
     node: chairFolding
   - type: DamageExaminable
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS. cheap :-(
     absorption: 6
+  # End Box Change
 
 - type: entity
   parent: ChairFolding
@@ -490,8 +500,10 @@
             max: 4
   - type: StaticPrice
     price: 50
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS. wood (big) :-)
     absorption: 20
+  # End Box Change
 
 - type: entity
   parent: StoolBase

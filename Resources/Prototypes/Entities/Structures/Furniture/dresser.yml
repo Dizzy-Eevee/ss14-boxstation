@@ -50,8 +50,10 @@
   - type: Construction
     graph: Dresser
     node: dresser
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
+  # End Box Change
 
 - type: entity
   id: DresserFilled

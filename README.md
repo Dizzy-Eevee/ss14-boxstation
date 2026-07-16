@@ -61,37 +61,5 @@ Read [LEGAL.md](/LEGAL.md) for legal information regarding the code licensing.
 
 Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and the copyright in the metadata file. [Example](https://github.com/ss14-harmony/ss14-harmony/blob/master/Resources/Textures/_Harmony/Clothing/Uniforms/Jumpsuit/hop_turtle.rsi/meta.json).
 
-<<<<<<< HEAD
 > [!NOTE]
 > Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
-=======
-To be more specific, code in Content./Impstation, Resources//Impstation and any Impstation specific scripts in Tools are licensed under AGPLv3. Other files are originally from other codebases and are not owned by Impstation, though any code must be relicensable to AGPLv3. SS14 is MIT licensed so this forking is possible.
-
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
-
-Note that some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
-
-## Attributions
-
-When we pull content from other forks, we try to organize their content to their own subfolders in each of the projects to keep track of attribution and try to prevent merge conflicts.
-
-Content under these subdirectories either originate from their respective fork, or are modifications related to content from their respective fork.
-
-| Subdirectory     | Fork Name           | Fork Repository                                         | License  |
-|------------------|---------------------|---------------------------------------------------------|----------|
-| `_Impstation`    | Impstation          | https://github.com/impstation/imp-station-14/           | AGPL 3.0 |
-| `_CD`            | Cosmatic Drift      | https://github.com/cosmatic-drift-14/cosmatic-drift     | MIT      |
-| `_Corvax`        | Corvax              | https://github.com/space-syndicate/space-station-14     | MIT      |
-| `_DEN`           | The Den             | https://github.com/TheDenSS14/TheDen                    | AGPL 3.0 |
-| `_DV`            | Delta-V             | https://github.com/DeltaV-Station/Delta-v/              | AGPL 3.0 |
-| `_EE`            | Einstein Engines    | https://github.com/Simple-Station/Einstein-Engines/     | AGPL 3.0 |
-| `_EstacaoPirata` | Estacao Pirata      | https://github.com/Day-OS/estacao-pirata-14/            | AGPL 3.0 |
-| `_Floof`         | Floof Station       | https://github.com/Floof-Station/Floof-Station          | AGPL 3.0 |
-| n/a              | Funky Station       | https://github.com/funky-station/funky-station          | AGPL 3.0 |
-| `_Goobstation`   | Goob Station        | https://github.com/Goob-Station/Goob-Station/           | AGPL 3.0 |
-| `_NF`            | Frontier Station    | https://github.com/new-frontiers-14/frontier-station-14 | AGPL 3.0 |
-| `_Harmony`       | Harmony             | https://github.com/ss14-harmony/ss14-harmony            | AGPL 3.0 |
-| `_Mono`          | Monolith            | https://github.com/Monolith-Station/Monolith            | AGPL 3.0 |
-| `_VDS`           | Vermist Dust Sector | https://github.com/vermist-sector/vermist-dust          | AGPL 3.0 |
-| `_White`         | White Dream         | https://github.com/WWhiteDreamProject/wwdpublic/        | AGPL 3.0 |
->>>>>>> 271b0e7be0f (Raycasted Audio with Reverb [Refactored Goob/Monolith Port] (#3632))

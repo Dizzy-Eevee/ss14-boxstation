@@ -40,8 +40,10 @@
   - type: Tag
     tags:
     - ForceFixRotations
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
+  # End Box Change
 
 - type: entity
   id: CounterBase
@@ -60,5 +62,7 @@
         - TableMask
         layer:
         - TableLayer
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 35
+  # End Box Change

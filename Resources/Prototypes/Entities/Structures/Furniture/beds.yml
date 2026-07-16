@@ -62,8 +62,10 @@
     noRot: true
   - type: Anchorable
   - type: Pullable
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 15
+  # End Box Change
 
 
 - type: entity

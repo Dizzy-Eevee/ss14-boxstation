@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   parent: [BaseStructureDynamic, ConstructibleMachine]
   id: SmartFridge
   name: SmartFridge
@@ -116,9 +116,11 @@
   - type: ExplosionResistance
     damageCoefficient: 0.1
   - type: Airtight
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
     reflectRay: true
+  # End Box Change
 
 - type: entity
   parent: SmartFridge

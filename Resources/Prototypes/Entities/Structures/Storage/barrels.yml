@@ -50,9 +50,11 @@
     solution: tank
   - type: StaticPrice
     price: 500
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
     reflectRay: true
+   # End Box Change
 
 - type: entity
   parent: BaseBarrelChem

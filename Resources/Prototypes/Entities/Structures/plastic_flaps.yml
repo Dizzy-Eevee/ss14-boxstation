@@ -41,8 +41,10 @@
         acts: ["Destruction"]
   - type: StaticPrice
     price: 100
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
+  # End Box Change
 
 - type: entity
   id: PlasticFlapsClear
@@ -97,9 +99,11 @@
   - type: Airtight
   - type: StaticPrice
     price: 100
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
     reflectRay: true
+  # End Box Change
 
 - type: entity
   id: PlasticFlapsAirtightOpaque
@@ -119,6 +123,8 @@
   - type: Airtight
   - type: StaticPrice
     price: 100
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
     reflectRay: true
+  # End Box Changge

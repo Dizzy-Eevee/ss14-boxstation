@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   parent: BaseStructure
   id: BaseFenceMetal
   name: chain link fence
@@ -79,8 +79,10 @@
     cost: 2
     delay: 2
     fx: EffectRCDDeconstruct2
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 2
+  # End Box Change
 
 - type: entity
   parent: BaseFenceMetal

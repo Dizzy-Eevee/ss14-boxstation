@@ -178,9 +178,11 @@
   - type: StaticPrice
     price: 150
   - type: PryUnpowered
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 5
     reflectRay: true
+  # End Box Change
 
 - type: entity
   id: BaseSecureWindoor

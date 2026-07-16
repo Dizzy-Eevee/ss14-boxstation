@@ -32,8 +32,10 @@
         behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 20
+  # End Box Change
 
 - type: entity
   id: BaseTree
@@ -94,9 +96,11 @@
             max: 8
   - type: TypingIndicator # Add diona typing indicator here so that diona players keep the same typing bubble when polymorphed into a tree.
     proto: diona
+  # Start Box Change: VDS acoustic data
   - type: AcousticData # VDS
     absorption: 30
     reflectRay: true
+  # End Box Change
 
 - type: entity
   parent: BaseTree
