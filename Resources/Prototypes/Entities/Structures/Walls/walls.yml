@@ -55,6 +55,10 @@
     resistance: 2
   - type: BlockWeather
   - type: SunShadowCast
+  - type: AcousticData # VDS
+    absorption: 5
+    reflectRay: true
+
 
 - type: entity
   abstract: true
@@ -1431,6 +1435,9 @@
     key: material
 # End of Harmony Change
     base: wood
+  - type: AcousticData # VDS. wood absorb more!
+    absorption: 12
+    reflectRay: true
 
 - type: entity
   parent: BaseWall
@@ -1480,6 +1487,9 @@
   - type: Construction
     graph: WebStructures
     node: wall
+  - type: AcousticData # VDS. web sticky
+    absorption: 22
+    reflectRay: true
 
 
 # Lavalend Walls
