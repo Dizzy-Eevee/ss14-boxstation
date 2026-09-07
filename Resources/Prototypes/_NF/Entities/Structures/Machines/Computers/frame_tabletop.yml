@@ -56,7 +56,7 @@
             - !type:DoActsBehavior
               acts: ["Destruction"]
     - type: StaticPrice
-      price: 100
+      price: 110 # Box Change: 100 -> 110 to fix arbitrage testfail
 
 - type: entity
   parent: BaseStructureComputerTabletop
