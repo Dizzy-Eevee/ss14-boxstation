@@ -604,7 +604,7 @@
     prototype: ComputerShuttleSyndie
   # Start Box Change: Tabletop
   - type: ComputerTabletopBoard
-    prototype: ComputerTabletopShuttleSyndie
+    prototype: ComputerTabletopShuttleAntag
   # End Box Change
 
 
