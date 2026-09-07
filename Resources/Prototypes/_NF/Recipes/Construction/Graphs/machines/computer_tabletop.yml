@@ -1,5 +1,5 @@
-- type: constructionGraph
-  id: ComputerWallmount
+﻿- type: constructionGraph
+  id: ComputerTabletop
   start: start
   graph:
     - node: start
@@ -7,7 +7,7 @@
         - to: frameUnsecured
           completed:
             - !type:SetAnchor
-              value: true # Explicitly true - should always be anchored
+              value: false
           steps:
             - material: Steel
               amount: 5
@@ -16,13 +16,15 @@
     - node: frameUnsecured
       actions:
       - !type:AppearanceChange
-      entity: ComputerWallmountFrame
+      entity: ComputerTabletopFrame
       edges:
         - to: boardUnsecured
+          conditions:
+            - !type:EntityAnchored {}
           steps:
-            - component: ComputerWallmountBoard
+            - component: ComputerTabletopBoard
               store: board
-              name: construction-graph-component-computer-wallmount-board
+              name: construction-graph-component-computer-tabletop-board
               icon:
                 sprite: "Objects/Misc/module.rsi"
                 state: "id_mod"
@@ -51,8 +53,7 @@
           conditions:
             - !type:EntityAnchored { }
           completed:
-            - !type:EmptyAllContainers
-              emptyAtUser: true # Try and prevent stuff going out into space
+            - !type:EmptyAllContainers {}
           steps:
             - tool: Prying
 
@@ -74,8 +75,9 @@
             - tool: Screwing
 
     - node: monitorMissing
-      entity: ComputerWallmountFrame
+      entity: ComputerTabletopFrame
       actions:
+        - !type:SetAnchor { }
         - !type:AppearanceChange
       edges:
         - to: monitorUnsecured
@@ -98,9 +100,9 @@
     - node: monitorUnsecured
       actions:
       - !type:AppearanceChange
-      entity: ComputerWallmountFrame
+      entity: ComputerTabletopFrame
       edges:
-        - to: wallmount computer
+        - to: tabletop computer
           conditions:
             - !type:EntityAnchored {}
           steps:
@@ -117,10 +119,10 @@
             - tool: Prying
               doAfter: 1
 
-    - node: wallmount computer
+    - node: tabletop computer
       entity: !type:BoardNodeEntity
         container: board
-        computer: Wallmount
+        computer: Tabletop
       edges:
         - to: monitorUnsecured
           completed:
@@ -131,7 +133,7 @@
               doAfter: 1
 
     - node: monitorBroken
-      entity: ComputerWallmountBroken
+      entity: ComputerTabletopBroken
       edges:
         - to: monitorMissing
           conditions:
