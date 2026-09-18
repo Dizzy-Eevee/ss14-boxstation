@@ -1,17 +1,22 @@
-using Content.Server._NF.Explosion.Components;
 using Content.Shared.Implants;
-using Content.Server.Body.Components;
+using Content.Shared.Body.Components;
 using Content.Shared._NF.Interaction.Events;
 using Content.Shared.Projectiles;
+using Content.Shared._NF.Trigger.Components;
+using Robust.Shared.Containers;
 
-namespace Content.Server.Explosion.EntitySystems;
+namespace Content.Shared.Trigger.Systems;
 
 public sealed partial class TriggerSystem
 {
+
+    [Dependency] private readonly SharedContainerSystem _container = default!;
     private void NFInitialize()
     {
-        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, BeforeGibbedEvent>(OnBeingGibbed);
-        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, ImplantRelayEvent<BeforeGibbedEvent>>(OnBeingGibbedRelay);
+        // Start Box Change: Comment out unused triggers
+        //SubscribeLocalEvent<TriggerOnBeingGibbedComponent, BeforeGibbedEvent>(OnBeingGibbed);
+        //SubscribeLocalEvent<TriggerOnBeingGibbedComponent, ImplantRelayEvent<BeforeGibbedEvent>>(OnBeingGibbedRelay);
+        // End Box Change
         SubscribeLocalEvent<TriggerOnInteractionPopupUseComponent, InteractionPopupOnUseFailureEvent>(OnPopupInteractionFailure);
         SubscribeLocalEvent<TriggerOnInteractionPopupUseComponent, InteractionPopupOnUseSuccessEvent>(OnPopupInteractionSuccess);
 
@@ -19,15 +24,17 @@ public sealed partial class TriggerSystem
         SubscribeLocalEvent<TriggerOnProjectileHitComponent, ProjectileHitEvent>(OnProjectileHitEvent);
     }
 
-    private void OnBeingGibbed(EntityUid uid, TriggerOnBeingGibbedComponent component, BeforeGibbedEvent args)
-    {
-        Trigger(uid);
-    }
+    // Start Box Change: Comment out unused triggers
+    //private void OnBeingGibbed(EntityUid uid, TriggerOnBeingGibbedComponent component, BeforeGibbedEvent args)
+    //{
+    //    Trigger(uid);
+    //}
 
-    private void OnBeingGibbedRelay(EntityUid uid, TriggerOnBeingGibbedComponent component, ImplantRelayEvent<BeforeGibbedEvent> args)
-    {
-        Trigger(uid);
-    }
+    //private void OnBeingGibbedRelay(EntityUid uid, TriggerOnBeingGibbedComponent component, ImplantRelayEvent<BeforeGibbedEvent> args)
+    //{
+    //    Trigger(uid);
+    //}
+    // End Box Change
 
     private void OnPopupInteractionFailure(EntityUid uid, TriggerOnInteractionPopupUseComponent component, InteractionPopupOnUseFailureEvent args)
     {
@@ -48,13 +55,13 @@ public sealed partial class TriggerSystem
         if (_container.TryGetContainingContainer((ent, xform), out var container))
         {
             _container.Remove(ent.Owner, container, force: true);
-            SpawnInContainerOrDrop(ent.Comp.Proto, container.Owner, container.ID);
+            PredictedSpawnInContainerOrDrop(ent.Comp.Proto, container.Owner, container.ID);
         }
         else
         {
-            Spawn(ent.Comp.Proto, xform.Coordinates);
+            PredictedSpawnAtPosition(ent.Comp.Proto, xform.Coordinates);
         }
-        QueueDel(ent);
+        PredictedQueueDel(ent);
     }
 
     private void OnProjectileHitEvent(EntityUid uid, TriggerOnProjectileHitComponent component, ref ProjectileHitEvent args)
