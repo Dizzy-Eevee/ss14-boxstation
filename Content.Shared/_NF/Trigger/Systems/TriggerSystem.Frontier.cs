@@ -21,7 +21,7 @@ public sealed partial class TriggerSystem
         SubscribeLocalEvent<TriggerOnInteractionPopupUseComponent, InteractionPopupOnUseSuccessEvent>(OnPopupInteractionSuccess);
 
         SubscribeLocalEvent<ReplaceOnTriggerComponent, TriggerEvent>(OnReplaceTrigger);
-        SubscribeLocalEvent<TriggerOnProjectileHitComponent, ProjectileHitEvent>(OnProjectileHitEvent);
+        //SubscribeLocalEvent<TriggerOnProjectileHitComponent, ProjectileHitEvent>(OnProjectileHitEvent); // Box Change: Comment out unused triggers
     }
 
     // Start Box Change: Comment out unused triggers
@@ -64,8 +64,10 @@ public sealed partial class TriggerSystem
         PredictedQueueDel(ent);
     }
 
-    private void OnProjectileHitEvent(EntityUid uid, TriggerOnProjectileHitComponent component, ref ProjectileHitEvent args)
-    {
-        Trigger(uid, args.Target);
-    }
+    // Start Box Change: Comment out unused triggers
+    //private void OnProjectileHitEvent(EntityUid uid, TriggerOnProjectileHitComponent component, ref ProjectileHitEvent args)
+    //{
+    //    Trigger(uid, args.Target);
+    //}
+    // End Box Change
 }
